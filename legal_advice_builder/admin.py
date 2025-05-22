@@ -65,6 +65,8 @@ class TextBlockAdmin(admin.ModelAdmin):
 class LawcaseAdmin(admin.ModelAdmin):
     model = LawCase
 
+    raw_id_fields = ('creator',)
+
     def get_urls(self):
         urls = super().get_urls()
         upload_urls = [
