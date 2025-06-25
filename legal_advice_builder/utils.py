@@ -48,7 +48,7 @@ def clean_html_field(text, setting="default"):
         "h4",
         "h5",
     }
-    allowed_attrs = {"*": ["style"]}
+    allowed_attrs = {"*": {"style"}}
     return nh3.clean(
         text,
         tags=allowed_tags,
