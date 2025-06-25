@@ -34,7 +34,7 @@ def only_text_align_css_properties(tag, attr, value):
 
 
 def clean_html_field(text, setting="default"):
-    allowed_tags = [
+    allowed_tags = {
         "p",
         "strong",
         "em",
@@ -47,7 +47,7 @@ def clean_html_field(text, setting="default"):
         "h3",
         "h4",
         "h5",
-    ]
+    }
     allowed_attrs = {"*": ["style"]}
     return nh3.clean(
         text,
